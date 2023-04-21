@@ -6,7 +6,7 @@ output=101
 
 
 
-Solution:
+Solution in Python:
 test=['a','b','hello',23,'100st','st101','99',16,9,2,'st100st']
 num_list=[]
 
