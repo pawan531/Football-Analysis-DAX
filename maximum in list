@@ -1,0 +1,35 @@
+# find maximum in list 
+
+input=['a','b','hello',23,'100st','st101','99',16,9,2,'st100st']
+output=101
+
+
+
+
+Solution:
+test=['a','b','hello',23,'100st','st101','99',16,9,2,'st100st']
+num_list=[]
+
+for char in test:
+    if isinstance(char,int):
+       num_list.append(char)
+    elif char.isdigit():
+        num_list.append(int(char))
+    elif char[0].isdigit():
+        str_dummy=''
+        for j in char:
+            if j.isdigit():
+                str_dummy=str_dummy+str(j)
+            if not j.isdigit():
+                num_list.append(int(str_dummy))
+                break
+    elif char[-1].isdigit():
+        str_dummy=''
+        for j in char[::-1]:
+            if j.isdigit():
+                str_dummy=str_dummy+str(j)
+            if not j.isdigit():
+                num_list.append(int(str_dummy))
+                break
+               
+print(max(num_list))
